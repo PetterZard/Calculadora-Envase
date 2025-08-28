@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainConstraintLayout"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_mitad_izquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_mitad_derecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:id="@+id/textView_total"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:gravity="end"
+        android:text="Total:  "
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView_suma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_top" />
+
+    <TextView
+        android:id="@+id/textView_suma"
+        android:layout_width="47dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="4dp"
+        android:gravity="start"
+        android:text="0"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_total"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_tercio_final_1"
+        app:layout_constraintStart_toEndOf="@id/textView_total"
+        app:layout_constraintTop_toTopOf="@id/textView_total" />
+
+    <TextView
+        android:id="@+id/textView_diferencia"
+        android:layout_width="92dp"
+        android:layout_height="27dp"
+        android:gravity="end"
+        android:text="Diferencia:"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/textView_suma"
+        app:layout_constraintEnd_toStartOf="@id/textView_resta"
+        app:layout_constraintStart_toStartOf="@+id/guideline_tercio_final_2"
+        app:layout_constraintTop_toTopOf="@id/textView_suma" />
+
+    <TextView
+        android:id="@+id/textView_resta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        android:gravity="start"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_diferencia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_diferencia"
+        app:layout_constraintTop_toTopOf="@id/textView_diferencia"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_tercio_final_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_tercio_final_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <TextView
+        android:id="@+id/textView_entre66"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="entre 66"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_tercio_final_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_total" />
+
+    <TextView
+        android:id="@+id/textView_division66"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/textView_entre66"
+        app:layout_constraintStart_toStartOf="@id/textView_entre66"
+        app:layout_constraintTop_toBottomOf="@id/textView_entre66" />
+
+    <TextView
+        android:id="@+id/textView_entre77"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="entre 77"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/textView_entre66"
+        app:layout_constraintStart_toStartOf="@id/guideline_tercio_final_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_tercio_final_2"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/textView_division77"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/textView_entre77"
+        app:layout_constraintStart_toStartOf="@id/textView_entre77"
+        app:layout_constraintTop_toBottomOf="@id/textView_entre77" />
+
+    <TextView
+        android:id="@+id/textView_entre84"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="entre 84"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/textView_entre77"
+        app:layout_constraintStart_toStartOf="@id/guideline_tercio_final_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/textView_division84"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/textView_entre84"
+        app:layout_constraintStart_toStartOf="@id/textView_entre84"
+        app:layout_constraintTop_toBottomOf="@id/textView_entre84" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_middle"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView_dato_a_comparar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dato a Comparar:"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/editText_dato_a_comparar"
+        />
+
+    <EditText
+        android:id="@+id/editText_dato_a_comparar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa el total esperado"
+        android:inputType="number"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/textView_dato_a_comparar"
+        app:layout_constraintBottom_toBottomOf="@id/textView_dato_a_comparar"
+        app:layout_constraintStart_toEndOf="@id/textView_dato_a_comparar"
+        app:layout_constraintEnd_toStartOf="@id/button_limpiar"
+        />
+    <Button
+        android:id="@+id/button_limpiar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Limpiar"
+        app:layout_constraintBottom_toBottomOf="@id/editText_dato_a_comparar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editText_dato_a_comparar"
+        app:layout_constraintStart_toEndOf="@id/editText_dato_a_comparar"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
